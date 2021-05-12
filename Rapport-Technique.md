@@ -23,8 +23,6 @@ Pour répondre à la problématique, à savoir la création d’un ChatBot trait
 
 Toutefois, nous avons aussi réalisé un ChatBot sous DialogFlow, une IA conversationnelle qui s’appuie sur les technologies de Deep Learning qui alimentent l’Assistant Google. C’est une solution simple et rapide d’intégration de ChatBot qui peut être intégré au Front sous forme de fenêtre Messenger. Sa conception est détaillée plus tard dans ce présent rapport.
 
-### Choix du modèle
-
 ## La base de données
 Avant de construire notre modèle, nous devons créer notre ensemble de données et pour celà, nous avons construit notre corpus à partir d'un fichier json.
 Nous avons fais le choix d'une base MongoDB sur une VM en docker contenant une seule collection afin d'y stocker notre corpus. La base de données sera accessible à l'aide de l'API.
