@@ -42,7 +42,7 @@ Chaque item de la base de données contient plusieurs variables:
 
 ![BDD](Ressources/bdd.png)
 
-## API
+## L'API
 Afin d'accéder à nos données, aussi bien pour l'entrainement du modèle que pour obtenir les réponses à envoyer à l'utilisateur, il nous faut un accès simple et rapide.
 
 Nous avons donc fait le choix d'utiliser FastAPI afin d'obtenir une API REST accessible à distance avec l'IP de la VM.
@@ -84,7 +84,6 @@ les sorties de la couche d'enrobage sont l'entrée de la couche récurrente avec
 La fonction LSTM permet non seulement de gérer efficacement la mémoire à court et long terme, mais également de conserver ou supprimer des informations gardées en mémoire.
 
 
-
 ## Création du site web et de la fenêtre du ChatBot
 Afin de présenter les deux types de ChatBot confectionnés, une page Web unique a été réalisée en guise de « maquette ». Deux fichiers HTML ont été réalisés (*base.html* et *index.html*) avec un fichier *style.css* pour la mise en forme. Enfin, la fenêtre du ChatBot sous TF-JS a été développée sous JavaScript (*main.js*).
 
@@ -107,3 +106,25 @@ Nous obtenons pour notre modèle en RNN une accuracy de l'ordre de 94% sur nos d
 
 ## Problèmes non résolus et axes d’améliorations
 Le choix d'un modèle RNN semble le bon choix malgrè des résultats de performance qui ne sont pas satisfaisants sur les données de validation. Ces résultats peuvent s'expliquer par le fait que le corpus ne soit pas suffisamment alimenté en questions. En effet, la réduction du nombre de "tags" a permis une amélioration des performances du modèle mais le nombre de questions par tags semble insuffisant. Une augmentation du nombre de questions permettrait certainement une augmentation de l'accuracy sur les données de validation et d'eviter un risque de surapprentissage du modèle.
+
+
+
+### Solution Dialogflow CX
+Durant nos recherches sur les téchnologies disponibles nous nous sommes penchés sur Dialogflow, la solution de Google en matière de chatbots. Ce service permet de créer des chatbots intéractifs rapidement et simplement sans avoir à faire de code. Il permet de générer automatiquement des modèles de Deep Learning et les entrainer en temps réel à chaque modification.
+
+Le panel se situe sur la console **Google Cloud**. Le menu principal contient un arbre à construire avec des routes. Cela permet de vérouiller certaines conditions si des **intents** sont detectés. Nous pouvons donc créer nos routes, les lier entre elles et y affecter des intents qu'il faudra créer.
+
+Chaque intent devra contenir plusieurs phrases d'entrainement afin que le modèle puisse savoir quand prédire ce sujet. Nous pouvons ensuite le relier à une route et y affecter une réponse à retourner.
+
+Voici l'arbre que nous avons créé, ils contient plusieurs routes afin de définir si l'utilisateur est un etudiant ou un partenaire avec plusieurs vérifications. Une fois ce choix fait, toutes les questions relatives à cette personne peuvent être posées.
+
+![schema](Ressources/dialogflow_schema.png)
+
+Voici un exemple des phrases d'entrainement pour l'intent ```tarif de la formation```: 
+
+![intent](Ressources/dialogflow_intent.png)
+
+Nous pouvons ensuite l'intégrer facilement sur un site web afin de l'utiliser. Les calculs étant fait sur les serveurs de Google, Dialogflow ne prend aucune ressource client pour fonctionner.
+
+Cette solution est payante, avec un crédit de 600€ pendant 12 mois afin de pouvoir l'essayer. Ensuite, le prix est de 0,20€ par utilisation.
+C'est donc un tarif qui peut monter rapidement mais qui est bien plus efficace que notre solution avec Tensorflow.
