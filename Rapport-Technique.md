@@ -24,6 +24,7 @@ Pour répondre à la problématique, à savoir la création d’un ChatBot trait
 Toutefois, nous avons aussi réalisé un ChatBot sous DialogFlow, une IA conversationnelle qui s’appuie sur les technologies de Deep Learning qui alimentent l’Assistant Google. C’est une solution simple et rapide d’intégration de ChatBot qui peut être intégré au Front sous forme de fenêtre Messenger. Sa conception est détaillée plus tard dans ce présent rapport.
 
 ### Choix du modèle
+
 ## La base de données
 Avant de construire notre modèle, nous devons créer notre ensemble de données et pour celà, nous avons construit notre corpus à partir d'un fichier json.
 Nous avons fais le choix d'une base MongoDB sur une VM en docker contenant une seule collection afin d'y stocker notre corpus. La base de données sera accessible à l'aide de l'API.
@@ -104,12 +105,7 @@ Nous obtenons pour notre modèle en RNN une accuracy de l'ordre de 94% sur nos d
 
 ![courbes](Ressources/courbes.png)
 
-## Problèmes non résolus et axes d’améliorations
-Le choix d'un modèle RNN semble le bon choix malgrè des résultats de performance qui ne sont pas satisfaisants sur les données de validation. Ces résultats peuvent s'expliquer par le fait que le corpus ne soit pas suffisamment alimenté en questions. En effet, la réduction du nombre de "tags" a permis une amélioration des performances du modèle mais le nombre de questions par tags semble insuffisant. Une augmentation du nombre de questions permettrait certainement une augmentation de l'accuracy sur les données de validation et d'eviter un risque de surapprentissage du modèle.
-
-
-
-### Solution Dialogflow CX
+## Solution Dialogflow CX
 Durant nos recherches sur les téchnologies disponibles nous nous sommes penchés sur Dialogflow, la solution de Google en matière de chatbots. Ce service permet de créer des chatbots intéractifs rapidement et simplement sans avoir à faire de code. Il permet de générer automatiquement des modèles de Deep Learning et les entrainer en temps réel à chaque modification.
 
 Le panel se situe sur la console **Google Cloud**. Le menu principal contient un arbre à construire avec des routes. Cela permet de vérouiller certaines conditions si des **intents** sont detectés. Nous pouvons donc créer nos routes, les lier entre elles et y affecter des intents qu'il faudra créer.
@@ -128,3 +124,10 @@ Nous pouvons ensuite l'intégrer facilement sur un site web afin de l'utiliser. 
 
 Cette solution est payante, avec un crédit de 600€ pendant 12 mois afin de pouvoir l'essayer. Ensuite, le prix est de 0,20€ par utilisation.
 C'est donc un tarif qui peut monter rapidement mais qui est bien plus efficace que notre solution avec Tensorflow.
+
+
+
+## Problèmes non résolus et axes d’améliorations
+Le choix d'un modèle RNN semble le bon choix malgrè des résultats de performance qui ne sont pas satisfaisants sur les données de validation. Ces résultats peuvent s'expliquer par le fait que le corpus ne soit pas suffisamment alimenté en questions. En effet, la réduction du nombre de "tags" a permis une amélioration des performances du modèle mais le nombre de questions par tags semble insuffisant. Une augmentation du nombre de questions permettrait certainement une augmentation de l'accuracy sur les données de validation et d'eviter un risque de surapprentissage du modèle.
+
+
