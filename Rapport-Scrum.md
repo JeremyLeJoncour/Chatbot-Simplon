@@ -1,14 +1,20 @@
 # ChatBot pour l’école IA Microsoft Brest Rapport Scrum
 #### Céline, Pereg, Guillaume, Jérémy
 ![Presentation](Ressources/scrum_agile.png)
-<br>
+
+<br><br><br>
+
 ## Contexte du projet
 Un ChatBot (to chat + bot) est un robot conversationnel qui permet de répondre automatiquement, via une messagerie instantanée, aux requêtes/demandes d'un client (un être humain).
 
 L'objectif phare du projet est de créer un ChatBot. Dans ce cas de figure, les clients vont être des nouveaux apprenants ou bien des partenaires potentiels de l'école qui posent des questions précises sur l’école Micorosoft IA Brest+. Le premier défi est que le ChatBot puisse répondre, automatiquement via des méthodes d'intelligence artificielle, à ces questions. Quant au deuxième défi, le ChatBot doit, à travers ses réponses, convaincre les visiteurs soit de postuler (les apprenants) ou de devenir un partenaire officiel. Par exemple, il doit intégrer des phrases qui font la force de l’école : Pédagogie active, Travail en équipe, Learning by teaching, évaluation par compétence, Type de partenariat, ....
 
+<br><br><br>
+
 ## Modalités d'évaluation
 Un rapport SCRUM qui reprend la présentation de l’équipe (scrum master, product ower…), les user stories priorisées, les backlogs sprint, les burndown charts, l’Impediment backlog, un lien vers le tableau de bord (Trello…), et tous les CR des cérémonials en annexe.
+
+<br><br>
 
 ## Identification des participants
 __Product Owner__ : Pereg H.
@@ -23,11 +29,14 @@ __Equipe de Développeurs__ : Guillaume V., Céline G., Pereg H., Jérémy LJ.
 
 ![Schema](Ressources/schema_scrum.png)
 
+<br><br>
+
 ## Product Backlog
 Nous avons évoqué la plupart des User Stories dès le lancement du projet afin de bien caractériser les objectifs à remplir et prioriser les tâches. Après construction du tableau (Trello), le Product Backlog a été formé.
 
 Ces US englobent plusieurs tâches qui seront traitées par l’équipe de développeurs. Certaines tâches sont axées sur la construction de l’IA, d’autres sur l’aspect Front/interface, des épics généraux à la demande du client. Le tableau est présent sur le fichier Excel Scrum.
 
+<br><br>
 
 User Stories | Type | Estimation | Priorité
 :- |:-: |:-: |:-:
@@ -57,6 +66,8 @@ Les US mettant en place la page Web et le ChatBot Messenger ont été réalisés
 
 Les informations utiles sur la formation Simplon constituait notre base de données et a été construite et mis en place en fin de semaine. Davantage de données ont été rajoutées au fur et à mesure.
 
+<br><br><br><br>
+
 ## Burndown Chart Sprint 1
 Nous avons réparti les US afin de remplir l'objectif de la semaine.
 
@@ -76,6 +87,8 @@ Je veux pouvoir choisir ma langue (FR/EN). | 5 | Abandon
 
 La partie construction de l'IA TF-JS demande beaucoup d'effort. Des difficultés sont présentes sur la réalisation d'un modèle viable, et de son intégration au Front JS. Nous avons décidé d'abandonné la US de pouvoir choisir la langue pour communiquer avec le ChatBot.
 
+<br><br>
+
 ## Burndown Chart Sprint 2 (Progression du Jeudi 06/05/21)
 
 ![BurndownChart2](Ressources/Burndown_chart_sprint2.png)
@@ -85,6 +98,8 @@ La partie construction de l'IA TF-JS demande beaucoup d'effort. Des difficultés
 Voici le lien du Trello : https://trello.com/b/MCf2iVqU/projet-chatbot
 
 ![Trello](Ressources/trello.png)
+
+<br><br>
 
 ## CR Sprint 1
 
